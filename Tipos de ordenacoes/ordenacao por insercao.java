@@ -5,8 +5,8 @@ public class Ordencao {
 
         int[] vet = {1, 6, 8, 4, 3, 9, 11, 10};
         
-       vet=insercao(vet);
-        for (int i = 0; i < vet.length; i++) {
+       vet=insercao(vet); // como puxar o return;
+        for (int i = 0; i < vet.length; i++) { 
             System.out.println(vet[i]);
         }
     }
