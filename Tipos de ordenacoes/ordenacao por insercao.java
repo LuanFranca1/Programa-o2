@@ -28,3 +28,5 @@ public class Ordencao {
     }
 }
 //       while ((j >= 0) && (vet[j] < atual)) { (decrescendo);
+
+// olhar o q o \t faz;
