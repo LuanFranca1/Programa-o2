@@ -12,13 +12,13 @@ public class Selecao {
         int i, j;
         int max = 0;
         double aux;
-        for (i = vet.length; i > 0; i--) {
+        for (i = vet.length-1; i > 0; i--) {
             max = i;
             for (j = 1; j < i - 1; i++) {
                 if(vet[j] > vet[max]){
                     max=j;
                 }
-                vet[max] = vet[i];
+                vet[i] = vet[max];
             }
         }
         aux = vet[max];
