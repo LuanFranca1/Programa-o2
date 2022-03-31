@@ -1,27 +1,50 @@
+package javaapplication1;
 
 import java.util.Scanner;
 
-public class LinearMelhorada {
-    
+public class JavaApplication1 {
+// buscar na posição que for digitada;
+
     public static Scanner entrada = new Scanner(System.in);
-    public static void main(String[]args){ 
+
+    public static void main(String[] args) {
+        int [] vet = {-1,-2,6,8,10,-10,-9,-6,6};
         
-        
-        int n=10;
-        int [] vet = new int[n];
         int x;
-        int a =buscaMelhorada(A,chave100,comeco 5,"fim" = a.length);
-      
-        /*for (int i = 0; i < vet.length; i++) {
-            System.out.println("Digita fudido");
-            vet[i] = entrada.nextInt();
-        }*/
-        
+         System.out.print("\tVetor desordenado[");
+        for (int i = 0; i < vet.length; i++) {
+            System.out.print(vet[i]);
+        }
+        System.out.println("]");
+        System.out.println(" ");
+        vet=insercao(vet);
+        System.out.print("\tVetor ordenado[");
+        for (int i = 0; i < vet.length; i++) {
+            System.out.print(vet[i]);
+        }
+        System.out.println("]");
+        int a =buscaMelhorada(vet,10,6,vet.length);
+        System.out.println(" a tá retornando: " + a);
     }
-    public static int  BuscaLinear(int n,int [] vet,int x){ // arrumar q ainda n está pegando;
+    public static int[] insercao(int[] vet) {
+        int atual;
+        int i, j;
+        for (i = 2; i < vet.length; i++) {
+            atual = vet[i];
+            j = i - 1;
+            while ((j >= 0) && (vet[j] > atual)) {
+                vet[j + 1] = vet[j];
+                j = j - 1;
+            }
+            vet[j + 1] = atual;
+            //System.out.println(atual);
+        }
+        return vet;
+    }
+    public static int  buscaMelhorada(int[]vet,int chave,int comeco,int fim){ // arrumar q ainda n está pegando;
         int i=1;
-        while(i <= n && x>= vet[i]){
-            if(vet[i] == x){
+        for(i = comeco;i<fim && chave>= vet[i];i++){
+            if(vet[i] == chave){
                 return i;
             }
             i=i+1;
