@@ -17,7 +17,7 @@ public class Ordencao {
         for (i = 2; i < vet.length; i++) {
             atual = vet[i];
             j = i - 1;
-            while ((j > 0) && (vet[j] > atual)) {
+            while ((j >= 0) && (vet[j] > atual)) {
                 vet[j + 1] = vet[j];
                 j = j - 1;
             }
