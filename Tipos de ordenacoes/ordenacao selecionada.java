@@ -21,9 +21,9 @@ public class Selecao {
                 vet[i] = vet[max];
             }
         }
-        aux = vet[max];
-        vet[max] = vet[1];
-        vet[i] = aux;
+        aux = vet[i];
+        vet[i] = vet[max];
+        vet[max] = aux;
         return vet;
     }
 
